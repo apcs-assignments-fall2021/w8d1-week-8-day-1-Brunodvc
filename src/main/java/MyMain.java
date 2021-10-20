@@ -4,8 +4,7 @@ public class MyMain {
 
     // Generates a random number between 10 and 20, inclusive
     public static int randomTeen() {
-        // YOUR CODE HERE FOR WARMUP
-        return -1;
+        return (int)(Math.random() *11) + 10;
     }
 
     // Use your previous method to generate three random numbers between 10 and 20, inclusive.
@@ -16,7 +15,11 @@ public class MyMain {
     // The largest number is 20
     // The smallest number is 10
     public static void main(String[] args) {
-        // YOUR CODE HERE FOR WARMUP
+        int x = randomTeen();
+        int y = randomTeen();
+        int z = randomTeen();
+        System.out.println(Mathey.max(x,y,z));
+        System.out.println(Math.min(x, Math.min(y,z)));
 
 
 

@@ -8,14 +8,21 @@ public class Mathey {
      * public static ...
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
+    public static int max(int num1, int num2){
+        if(num1>num2){return num1;}
+        else {return num2;}
+    }
     /* Write another method called max that takes **two doubles**
      * Ex. max(1.2, 4.0) => 4.0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+    public static double max(double num1, double num2) {
+        if (num1 > num2) {
+            return num1;
+        } else {
+            return num2;
+        }
+    }
 
 
 
@@ -24,18 +31,25 @@ public class Mathey {
      * Ex. max(1, 4, 2) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
+        public static int max(int bum_1, int bum_2, int bum_3){
+            if (bum_1 > bum_2 && bum_1 > bum_3) {
+                return bum_1;
+            } else if (bum_2 > bum_1 && bum_2 > bum_3) {
+                return bum_2;
+            } else {
+                return bum_3;
+            }
+        }
     /* Write another method called max that takes **four doubles**
      * Ex. max(1.0, 4.25, 1.3, 2.1) => 4.25
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
+        public static double max(double dub1, double dub2, double dub3, double dub4){
+            if (dub1 > dub2 && dub1 > dub3 && dub1 > dub4){return dub1;}
+            else if (dub2 > dub1 && dub2 > dub3 && dub2 > dub4){return dub2;}
+            else if (dub3 > dub1 && dub3 > dub2 && dub3> dub4){return dub3;}
+            else {return dub4;}
+        }
     /* Write a method that takes **two integers** and generates a random
      * integer between the first integer and the second integer, inclusive
      * you may assume that the first integer is smaller than the second
@@ -45,6 +59,9 @@ public class Mathey {
      *     randomInteger(1, 4) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
+        public static int randomInteger(int num1, int num2){
+            return (int)(Math.random() *(num2-num1+1)) + num1;
+        }
 
 
 
@@ -57,13 +74,9 @@ public class Mathey {
      *     randomInteger(5) => 0
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
-
-
-
+    public static int randomInteger(int num1){
+        return (int)(Math.random() *(num1+1));
+    }
     // YOU MAY WORK ON THE FOLLOWING METHODS IF YOU FINISH EARLY
 
     /* Write a method that takes **two integers** and calculates the exponent
@@ -73,32 +86,32 @@ public class Mathey {
      *     pow(3, 4) => 81
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
+    public static int pow(int base, int pow){
+        int total = 1;
+        for (int i = 0; i<pow; i++){
+            total *= base;
+        }
+        return total;
+    }
     /* Write a method that takes **one integer** and returns the
      * absolute value of that integer
      * Ex. abs(2) => 2
      *     abs(-2) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
+    public static int abs(int num){
+        return Math.abs(num);
+    }
     /* Write a method that takes **one double** and returns the
      * integer value that you get by rounding that double
      * You may assume that the integer is positive
      * Ex. round(2.4) => 2
-     *     round(2.5) => 2
+     *     round(2.5) => 3
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
-
+    public static int round(double num) {
+        return (int) (num + 0.5);
+    }
     /* Write a method that takes **one double** and returns the
      * floor of that value
      * The floor is defined as the **largest** integer that is **less than**
@@ -108,11 +121,9 @@ public class Mathey {
      *     floor(2.999999999999) => 2
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
-
+    public static int floor(double num) {
+        return (int) (num);
+    }
     /* Write a method that takes **one double** and returns the
      * ceiling of that value
      * The ceiling is defined as the **smallest** integer that is **greater than**
@@ -122,11 +133,9 @@ public class Mathey {
      *     ceil(3.01) => 4
      */
     // YOUR CODE HERE, METHOD HEADER ALSO REQUIRED
-
-
-
-
-
+        public static int ceil(double num){
+            return (int) (num + 0.999999);
+        }
     /* Calculates the square root iteratively, using the Babylonian method
      * This method has been provided for you
      */
